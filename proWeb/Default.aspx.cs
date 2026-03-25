@@ -252,8 +252,113 @@ namespace proWeb
                 lblMessage.Text = "Error: No se ha encontrado ningún producto con el código " + txtCode.Text;
             }
         }
-        protected void btnReadFirst_Click(object sender, EventArgs e) { }
-        protected void btnReadPrev_Click(object sender, EventArgs e) { }
-        protected void btnReadNext_Click(object sender, EventArgs e) { }
+        protected void btnReadFirst_Click(object sender, EventArgs e)
+        {
+            lblMessage.Text = "";
+            lblMessage.ForeColor = System.Drawing.Color.Red;
+
+            try
+            {
+                ENProduct producto = new ENProduct();
+
+                if (producto.ReadFirst())
+                {
+                    txtCode.Text = producto.Code;
+                    txtName.Text = producto.Name;
+                    txtAmount.Text = producto.Amount.ToString();
+                    txtPrice.Text = producto.Price.ToString();
+                    ddlCategory.SelectedValue = producto.Category.ToString();
+                    txtCreationDate.Text = producto.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
+                    lblMessage.Text = "Primer producto leído correctamente";
+                }
+                else
+                {
+                    lblMessage.Text = "La base de datos de productos está vacía";               
+                }
+            }
+            catch(Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+            }
+
+        }
+        protected void btnReadPrev_Click(object sender, EventArgs e) 
+        {
+            lblMessage.Text = "";
+            lblMessage.ForeColor = System.Drawing.Color.Red;
+
+            if (string.IsNullOrWhiteSpace(txtCode.Text))
+            {
+                lblMessage.Text = "Error: introducir un código para buscar el anterior";
+                return;
+            }
+                
+            try
+            {
+                ENProduct producto = new ENProduct();
+                producto.Code = txtCode.Text;
+
+                if (producto.ReadPrev())
+                {
+                    txtCode.Text = producto.Code;
+                    txtName.Text = producto.Name;
+                    txtAmount.Text = producto.Amount.ToString();
+                    txtPrice.Text = producto.Price.ToString();
+                    ddlCategory.SelectedValue = producto.Category.ToString();
+                    txtCreationDate.Text = producto.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
+                    lblMessage.Text = "Producto anterior leído correctamente";
+                }
+                else
+                {
+                    lblMessage.Text = "No hay más productos antes del código introducido: " + txtCode.Text;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+            }
+        }
+        protected void btnReadNext_Click(object sender, EventArgs e) 
+        {
+            lblMessage.Text = "";
+            lblMessage.ForeColor = System.Drawing.Color.Red;
+
+            if (string.IsNullOrWhiteSpace(txtCode.Text))
+            {
+                lblMessage.Text = "Error: introducir un código para buscar el siguiente";
+                return;
+            }
+
+            try
+            {
+                ENProduct producto = new ENProduct();
+                producto.Code = txtCode.Text;
+
+                if (producto.ReadNext())
+                {
+                    txtCode.Text = producto.Code;
+                    txtName.Text = producto.Name;
+                    txtAmount.Text = producto.Amount.ToString();
+                    txtPrice.Text = producto.Price.ToString();
+                    ddlCategory.SelectedValue = producto.Category.ToString();
+                    txtCreationDate.Text = producto.CreationDate.ToString("dd/MM/yyyy HH:mm:ss");
+
+                    lblMessage.ForeColor = System.Drawing.Color.Green;
+                    lblMessage.Text = "Producto siguiente leído correctamente";
+                }
+                else
+                {
+                    lblMessage.Text = "No hay más productos después del código introducido: " + txtCode.Text;
+                }
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = "Error: " + ex.Message;
+            }
+        }
     }
 }
