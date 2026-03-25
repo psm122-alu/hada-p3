@@ -1,24 +1,29 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="proWeb.Site1" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>HADA P3</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
-    <h1>
-    Pau Sempere Martínez - 20520990E <br />
-    Pablo Riquelme Gutiérrez - 46081260R <br />
-    HADA P3 - CURSO 2025/2026
-</h1>
+<body style="font-family: 'Times New Roman', Times, serif; margin: 20px;">
     <form id="form1" runat="server">
         <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+            <div style="margin-bottom: 20px; font-family: Arial, sans-serif; font-size: 14px;">
+                Pau Sempere Martínez - 20520990E <br />
+                Pablo Riquelme Gutiérrez - 46081260R 
+            </div>
+
+            <div style="background-color: #38caca; text-align: center; padding: 40px 20px; margin-bottom: 30px;">
+                <h1 style="margin: 0;">HADA P3 - CURSO 2025/2026</h1>
+            </div>
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </form>
 </body>
