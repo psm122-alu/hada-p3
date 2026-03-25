@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace library
 {
-    internal class CADCategory
+    public class CADCategory
     {
         private string conexion;
 
@@ -22,7 +22,7 @@ namespace library
             bool leer = false;
             SqlConnection conn = null;
 
-            String comando = "Select * from Categories where id = " + en.id;
+            String comando = "Select * from Categories where id = " + en.Id;
 
             try
             {
@@ -34,7 +34,7 @@ namespace library
 
                 if (datos_leer.Read())
                 {
-                    en.name = datos_leer["name"].ToString();
+                    en.Name = datos_leer["name"].ToString();
                     leer = true;
                 }
 
@@ -42,7 +42,7 @@ namespace library
             }
             catch (SqlException sqlex)
             {
-                throw new Exception("FALLO AL LEER: " + en.id, sqlex);
+                throw new Exception("FALLO AL LEER: " + en.Id, sqlex);
             }
 
             finally
@@ -70,8 +70,8 @@ namespace library
                 while (datos_leer.Read())
                 {
                     ENCategory categoria = new ENCategory();
-                    categoria.id = int.Parse(datos_leer["id"].ToString());
-                    categoria.name = datos_leer["name"].ToString();
+                    categoria.Id = int.Parse(datos_leer["id"].ToString());
+                    categoria.Name = datos_leer["name"].ToString();
                     lista.Add(categoria);
                 }
                 datos_leer.Close();
