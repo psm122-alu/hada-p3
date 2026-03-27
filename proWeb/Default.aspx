@@ -42,13 +42,13 @@
 
     <div style="margin-bottom: 30px;">
 <div style="margin-bottom: 30px;">
-    <asp:Button ID="btnCreate" runat="server" Text="Create" Width="80px" OnClick="btnCreate_Click" />
-    <asp:Button ID="btnUpdate" runat="server" Text="Update" Width="80px" style="margin-left: 5px;" OnClick="btnUpdate_Click" />
-    <asp:Button ID="btnDelete" runat="server" Text="Delete" Width="80px" style="margin-left: 5px;" OnClick="btnDelete_Click" />
-    <asp:Button ID="btnRead" runat="server" Text="Read" Width="80px" style="margin-left: 5px;" OnClick="btnRead_Click" />
-    <asp:Button ID="btnReadFirst" runat="server" Text="Read First" Width="90px" style="margin-left: 5px;" OnClick="btnReadFirst_Click" />
-    <asp:Button ID="btnReadPrev" runat="server" Text="Read Prev" Width="90px" style="margin-left: 5px;" OnClick="btnReadPrev_Click" />
-    <asp:Button ID="btnReadNext" runat="server" Text="Read Next" Width="90px" style="margin-left: 5px;" OnClick="btnReadNext_Click" />
+    <asp:Button ID="btnCreate" runat="server" Text="Create" Width="80px" OnClick="ButtonCreate_Click" />
+    <asp:Button ID="btnUpdate" runat="server" Text="Update" Width="80px" style="margin-left: 5px;" OnClick="ButtonUpdate_Click" />
+    <asp:Button ID="btnDelete" runat="server" Text="Delete" Width="80px" style="margin-left: 5px;" OnClick="ButtonDelete_Click" />
+    <asp:Button ID="btnRead" runat="server" Text="Read" Width="80px" style="margin-left: 5px;" OnClick="ButtonRead_Click" />
+    <asp:Button ID="btnReadFirst" runat="server" Text="Read First" Width="90px" style="margin-left: 5px;" OnClick="ButtonReadFirst_Click" />
+    <asp:Button ID="btnReadPrev" runat="server" Text="Read Prev" Width="90px" style="margin-left: 5px;" OnClick="ButtonReadPrev_Click" />
+    <asp:Button ID="btnReadNext" runat="server" Text="Read Next" Width="90px" style="margin-left: 5px;" OnClick="ButtonReadNext_Click" />
 </div>
     </div>
 

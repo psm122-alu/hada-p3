@@ -24,7 +24,7 @@ namespace proWeb
 
         }
 
-        protected void btnCreate_Click(object sender, EventArgs e)
+        protected void ButtonCreate_Click(object sender, EventArgs e)
         {
             lblMessage.Text = ""; // Limpiar mensajes anteriores
             lblMessage.ForeColor = System.Drawing.Color.Red; 
@@ -102,7 +102,7 @@ namespace proWeb
         }
 
 
-        protected void btnUpdate_Click(object sender, EventArgs e)
+        protected void ButtonUpdate_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -178,7 +178,7 @@ namespace proWeb
                 Console.WriteLine("Product operation has failed. Error: {0}", ex.Message);
             }
         }
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void ButtonDelete_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -219,7 +219,7 @@ namespace proWeb
                 Console.WriteLine("Product operation has failed. Error: {0}", ex.Message);
             }
         }
-        protected void btnRead_Click(object sender, EventArgs e)
+        protected void ButtonRead_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -252,7 +252,7 @@ namespace proWeb
                 lblMessage.Text = "Error: No se ha encontrado ningún producto con el código " + txtCode.Text;
             }
         }
-        protected void btnReadFirst_Click(object sender, EventArgs e)
+        protected void ButtonReadFirst_Click(object sender, EventArgs e)
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -284,7 +284,7 @@ namespace proWeb
             }
 
         }
-        protected void btnReadPrev_Click(object sender, EventArgs e) 
+        protected void ButtonReadPrev_Click(object sender, EventArgs e) 
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
@@ -322,7 +322,7 @@ namespace proWeb
                 lblMessage.Text = "Error: " + ex.Message;
             }
         }
-        protected void btnReadNext_Click(object sender, EventArgs e) 
+        protected void ButtonReadNext_Click(object sender, EventArgs e) 
         {
             lblMessage.Text = "";
             lblMessage.ForeColor = System.Drawing.Color.Red;
